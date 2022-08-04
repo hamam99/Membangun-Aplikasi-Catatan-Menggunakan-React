@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import moment from 'moment'
 import NoteInput from './NoteInput'
 import NotesList from './NotesList'
+import { getInitialData } from '../utils'
 const NoteApp = () => {
-  const [notes, setNotes] = useState([])
+  const [notes, setNotes] = useState(getInitialData())
 
   const addNotes = ({ title, body }) => {
     setNotes((prevState) => [
